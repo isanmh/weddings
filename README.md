@@ -1,6 +1,9 @@
-# Undangan Pernikahan — Ihsan & Ai Liana (React + Vite)
-
-Hasil konversi dari file HTML satu-file ke project **React + Vite** yang terstruktur per komponen.
+# Undangan Pernikahan — Ihsan & Ai Liana 11.10.2026 (React + Vite)
+Link Undangan : https://github.com/isanmh/weddings <br><br>
+Hasil konversi dari file HTML satu-file ke project **React + Vite** yang terstruktur per komponen. <br><br>
+Jika ingin melihat versi Html, CSS, JS bisa dilihat di : <br>
+Github : <a href="https://github.com/isanmh/wedding" target="_blank">https://github.com/isanmh/wedding (Versi Native html,css,js)</a><br>
+Hosting Pages : <a href="https://github.com/isanmh/wedding" target="_blank">https://github.com/isanmh/wedding (Versi Native html,css,js)</a>
 
 ## 1. Install dependency
 
