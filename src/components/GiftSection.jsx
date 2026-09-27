@@ -4,7 +4,10 @@ function BankCard({ name, account, chipId, aos, delay }) {
   return (
     <div
       className="bank-card relative overflow-hidden rounded-[26px] p-5 md:p-6 shadow-[0_20px_45px_rgba(30,41,59,0.18)] border border-white/60 text-left transition-transform min-h-[210px] flex flex-col justify-between"
-      style={{ background: "linear-gradient(135deg, #f5f7f9 0%, #e6e9ed 45%, #f0f2f5 100%)" }}
+      style={{
+        background:
+          "linear-gradient(135deg, #f5f7f9 0%, #e6e9ed 45%, #f0f2f5 100%)",
+      }}
       data-aos={aos}
       data-aos-delay={delay}
       data-aos-duration="700"
@@ -14,9 +17,11 @@ function BankCard({ name, account, chipId, aos, delay }) {
       <div
         className="absolute right-0 bottom-0 w-28 h-28 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(rgba(100, 116, 139, 0.35) 1px, transparent 1px)",
+          backgroundImage:
+            "radial-gradient(rgba(100, 116, 139, 0.35) 1px, transparent 1px)",
           backgroundSize: "7px 7px",
-          WebkitMaskImage: "linear-gradient(to top left, black 20%, transparent 70%)",
+          WebkitMaskImage:
+            "linear-gradient(to top left, black 20%, transparent 70%)",
           maskImage: "linear-gradient(to top left, black 20%, transparent 70%)",
         }}
       ></div>
@@ -31,7 +36,16 @@ function BankCard({ name, account, chipId, aos, delay }) {
               <stop offset="1" stopColor="#b8860b" />
             </linearGradient>
           </defs>
-          <rect x="1" y="1" width="46" height="36" rx="8" fill={`url(#${chipId})`} stroke="#a97a1f" strokeWidth="1" />
+          <rect
+            x="1"
+            y="1"
+            width="46"
+            height="36"
+            rx="8"
+            fill={`url(#${chipId})`}
+            stroke="#a97a1f"
+            strokeWidth="1"
+          />
           <line x1="16" y1="1" x2="16" y2="37" stroke="#a97a1f" />
           <line x1="32" y1="1" x2="32" y2="37" stroke="#a97a1f" />
           <line x1="1" y1="12" x2="47" y2="12" stroke="#a97a1f" />
@@ -40,15 +54,23 @@ function BankCard({ name, account, chipId, aos, delay }) {
           <path d="M16 25 Q24 18 32 25" stroke="#a97a1f" fill="none" />
         </svg>
         <div className="flex items-center gap-1.5">
-          <img src="/img/bca.svg" alt="Logo BCA" className="w-20 h-20" />
+          <img
+            src={`${import.meta.env.BASE_URL}img/bca.svg`}
+            alt="Logo BCA"
+            className="w-20 h-20"
+          />
         </div>
       </div>
 
       {/* baris bawah: nama, nomor rekening & tombol copy */}
       <div className="relative z-10 flex items-end justify-between gap-3 mt-8">
         <div className="min-w-0">
-          <p className="font-bold text-gray-800 text-sm md:text-base mb-1 truncate">{name}</p>
-          <p className="font-extrabold text-gray-900 text-lg md:text-2xl tracking-wide font-mono">{account}</p>
+          <p className="font-bold text-gray-800 text-sm md:text-base mb-1 truncate">
+            {name}
+          </p>
+          <p className="font-extrabold text-gray-900 text-lg md:text-2xl tracking-wide font-mono">
+            {account}
+          </p>
         </div>
         <button
           onClick={() => copyText(account)}
@@ -75,15 +97,30 @@ export default function GiftSection() {
     >
       <div className="max-w-4xl mx-auto fade-up">
         <i className="ph-light ph-gift text-5xl md:text-6xl text-blue-600 mb-4 drop-shadow-sm"></i>
-        <h2 className="font-script text-5xl text-navy mb-4">Amplop Digital & Kado</h2>
+        <h2 className="font-script text-5xl text-navy mb-4">
+          Amplop Digital & Kado
+        </h2>
         <p className="font-body text-sm md:text-base text-gray-600 mb-10 max-w-xl mx-auto">
-          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun, jika ingin memberikan tanda kasih,
-          dapat melalui transfer atau mengirim kado fisik.
+          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun,
+          jika ingin memberikan tanda kasih, dapat melalui transfer atau
+          mengirim kado fisik.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-10">
-          <BankCard name="IHSAN MIFTAHUL HUDA" account="2832362752" chipId="chipGrad1" aos="fade-down-right" delay="150" />
-          <BankCard name="AI LIANA NURAENI" account="1093162114" chipId="chipGrad2" aos="fade-down-left" delay="150" />
+          <BankCard
+            name="IHSAN MIFTAHUL HUDA"
+            account="2832362752"
+            chipId="chipGrad1"
+            aos="fade-down-right"
+            delay="150"
+          />
+          <BankCard
+            name="AI LIANA NURAENI"
+            account="1093162114"
+            chipId="chipGrad2"
+            aos="fade-down-left"
+            delay="150"
+          />
 
           <div
             className="gift-card p-6 rounded-2xl shadow-[0_15px_30px_rgba(74,143,199,0.15)] border border-blue-100 text-left transition-transform flex flex-col justify-between md:col-span-2"
@@ -93,9 +130,15 @@ export default function GiftSection() {
             data-aos-duration="700"
           >
             <div>
-              <h4 className="font-sans font-bold text-xl text-navy mb-1">Kirim Kado Fisik</h4>
-              <p className="text-xs text-gray-500 mb-2 font-body">Alamat Penerima:</p>
-              <p className="text-xs text-navy font-semibold mb-3 leading-relaxed whitespace-pre-line">{ALAMAT_KADO}</p>
+              <h4 className="font-sans font-bold text-xl text-navy mb-1">
+                Kirim Kado Fisik
+              </h4>
+              <p className="text-xs text-gray-500 mb-2 font-body">
+                Alamat Penerima:
+              </p>
+              <p className="text-xs text-navy font-semibold mb-3 leading-relaxed whitespace-pre-line">
+                {ALAMAT_KADO}
+              </p>
             </div>
             <button
               onClick={() => copyText(ALAMAT_KADO)}

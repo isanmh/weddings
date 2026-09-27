@@ -63,10 +63,19 @@ export default function App() {
   return (
     <LightboxProvider>
       {/* audio background */}
-      <audio ref={audioRef} src="/nadin.mp3" preload="auto" loop className="hidden"></audio>
+      <audio
+        ref={audioRef}
+        src={`${import.meta.env.BASE_URL}nadin.mp3`}
+        preload="auto"
+        loop
+        className="hidden"
+      ></audio>
 
       {/* daun berjatuhan di seluruh halaman */}
-      <div ref={leavesRef} className="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+      <div
+        ref={leavesRef}
+        className="fixed inset-0 pointer-events-none overflow-hidden z-0"
+      ></div>
 
       <Cover
         audioRef={audioRef}
@@ -76,7 +85,10 @@ export default function App() {
         onOpened={() => setInvitationOpen(true)}
       />
 
-      <main id="main-content" className="relative z-10 w-full bg-transparent pb-32">
+      <main
+        id="main-content"
+        className="relative z-10 w-full bg-transparent pb-32"
+      >
         <HeroSoftBlue />
         <QuoteSection />
         <CoupleProfile />
@@ -88,15 +100,21 @@ export default function App() {
         <ClosingSection />
 
         <div className="py-10 pb-28 text-center text-xs text-gray-500 font-body">
-          &copy; 2026 Ihsan & Ai Liana <i className="ph-fill ph-heart text-blue-400 mx-1"></i>
+          &copy; 2026 Ihsan & Ai Liana{" "}
+          <i className="ph-fill ph-heart text-blue-400 mx-1"></i>
           <br />
-          Made with <i className="ph-fill ph-heart text-red-500 mx-0.5"></i> by Ihsan
+          Made with <i className="ph-fill ph-heart text-red-500 mx-0.5"></i> by
+          Ihsan
         </div>
       </main>
 
       <Lightbox />
       <FloatingNav />
-      <AudioButton visible={invitationOpen} isPlaying={isPlaying} onToggle={toggleAudio} />
+      <AudioButton
+        visible={invitationOpen}
+        isPlaying={isPlaying}
+        onToggle={toggleAudio}
+      />
     </LightboxProvider>
   );
 }
