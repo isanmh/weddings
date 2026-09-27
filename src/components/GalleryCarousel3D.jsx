@@ -173,8 +173,16 @@ export default function GalleryCarousel3D() {
                   alt={img.alt}
                   decoding="async"
                   fetchPriority={i === 0 ? "high" : undefined}
+                  visibleByDefault={i === 0}
                   className="w-full h-full object-cover pointer-events-none"
                 />
+                {/* Badge "Lihat" + ikon zoom, hanya muncul di slide yang sedang aktif */}
+                {i === activeIndex && (
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-navy/70 backdrop-blur-sm text-white text-xs md:text-sm font-semibold px-3.5 py-1.5 rounded-full shadow-lg pointer-events-none animate-pulse">
+                    <i className="ph-bold ph-magnifying-glass-plus text-sm md:text-base"></i>
+                    <span>Lihat</span>
+                  </div>
+                )}
               </div>
             ))}
           </div>

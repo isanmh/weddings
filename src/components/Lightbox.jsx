@@ -47,6 +47,8 @@ export default function Lightbox() {
       <CachedImage
         src={current.src}
         alt={current.alt || `Momen ${index + 1}`}
+        visibleByDefault
+        wrapperClassName="block max-w-full max-h-[85vh]"
         className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl border border-blueSoft/30"
       />
       <button

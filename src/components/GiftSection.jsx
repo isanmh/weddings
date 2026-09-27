@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { copyText } from "../hooks/copyText";
 
 function BankCard({ name, account, chipId, aos, delay }) {
@@ -54,9 +55,11 @@ function BankCard({ name, account, chipId, aos, delay }) {
           <path d="M16 25 Q24 18 32 25" stroke="#a97a1f" fill="none" />
         </svg>
         <div className="flex items-center gap-1.5">
-          <img
+          <LazyLoadImage
             src={`${import.meta.env.BASE_URL}img/bca.svg`}
             alt="Logo BCA"
+            effect="opacity"
+            threshold={200}
             className="w-20 h-20"
           />
         </div>

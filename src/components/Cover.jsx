@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLeaves } from "../hooks/useLeaves";
-import.meta.env.BASE_URL;
+
+const BASE_URL = import.meta.env.BASE_URL;
 
 export default function Cover({
   audioRef,
@@ -53,7 +54,7 @@ export default function Cover({
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(img/bdg/9.webp)`,
+          backgroundImage: `url(${BASE_URL}img/bdg/9.webp)`,
         }}
       ></div>
 
