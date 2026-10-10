@@ -1,4 +1,4 @@
-# Undangan Pernikahan — Ihsan & Ai Liana 11.10.2026 (React + Vite)
+# Undangan Pernikahan — Ihsan & Ai Liana 11.10.2026 (React + Vite + Tailwind)
 Link Undangan : https://github.com/isanmh/weddings <br><br>
 Hasil konversi dari file HTML satu-file ke project **React + Vite** yang terstruktur per komponen. <br><br>
 Jika ingin melihat versi Html, CSS, JS bisa dilihat di : <br>
